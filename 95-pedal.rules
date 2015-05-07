@@ -1,1 +1,2 @@
-KERNEL=="hidraw0", SUBSYSTEMS=="usb", ATTRS{idVendor}=="0c45", ATTRS{idProduct}=="7403", MODE="0666", GROUP="plugdev", SYMLINK+="pedal", RUN+="/usr/bin/notify-send 'Pedal Connected'"
+#KERNEL=="hidraw0", SUBSYSTEMS=="usb", ATTRS{idVendor}=="0c45", ATTRS{idProduct}=="7403", MODE="0666", GROUP="plugdev", SYMLINK+="pedal", RUN+="/usr/bin/notify-send 'Pedal Connected'"
+KERNEL=="event*", SUBSYSTEMS=="usb", ATTRS{idVendor}=="0c45", ATTRS{idProduct}=="7403", MODE="0666", GROUP="plugdev", SYMLINK+="pedal"
