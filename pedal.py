@@ -64,7 +64,8 @@ class Pedal(object):
             self.joy_pub.publish(self.joy_msg)
             r.sleep()
 
-        self.pedal_dev.close()
+        for dev in self.pedal_devs:
+            dev.close()
         print('done')
 
 def main():
