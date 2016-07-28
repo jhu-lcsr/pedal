@@ -52,7 +52,7 @@ class Pedal(object):
                 if len(self.pedal_devs) == self.n_pedals:
                     break
 
-        self.joy_pub = rospy.Publisher('joy', Joy)
+        self.joy_pub = rospy.Publisher('joy', Joy, queue_size=50)
         r = rospy.Rate(50)
 
         while not rospy.is_shutdown():
